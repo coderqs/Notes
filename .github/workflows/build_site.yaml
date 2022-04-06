@@ -1,0 +1,53 @@
+name: CI
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+
+      - name: Git checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+          submodules: true
+
+      - name: Git log
+        run: |
+          git log
+      
+      - name: Read Hugo info
+        id: hugo-info
+        run: |
+          . ./.HUGO_VERSION
+          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
+          echo "::set-output name=HUGO_EXTENDED::${HUGO_EXTENDED}"
+
+      - name: Setup hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '${{ steps.hugo-info.outputs.HUGO_VERSION }}' #"latest"
+          extended: ${{ steps.hugo-info.outputs.HUGO_EXTENDED }} #true 
+
+      - name: Build
+        # remove --minify tag if you do not need it
+        # docs: https://gohugo.io/hugo-pipes/minification/
+        run: hugo --minify --gc --theme hugo-book
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.TOKEN }}
+          external_repository: coderqs/coderqs.github.io
+          publish_dir: ./public
+          #   keep_files: true
+          user_name: coderqs
+          user_email: <coderqs@coderqs.com>
+          publish_branch: wiki
+          cname: wiki.coderqs.com
