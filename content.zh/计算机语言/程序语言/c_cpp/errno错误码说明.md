@@ -1,7 +1,7 @@
-\<markdown\> \# errno 错误码说明 关于 errno 的相关定义都在头文件
-\`/usr/include/asm/errno.h\` 中，下面是从文件中拷出来方便查询 \`\`\`
-
-      #define EPERM 1 /* Operation not permitted */操作不允许
+# errno 错误码说明 关于 errno 的相关定义都在头文件
+`/usr/include/asm/errno.h` 中，下面是从文件中拷出来方便查询
+```
+    #define EPERM 1 /* Operation not permitted */操作不允许
 
 　　#define ENOENT 2 /\* No such file or directory \*/文件/路径不存在
 
@@ -126,16 +126,16 @@
 
 　　#define EBFONT 59 /\* Bad font file format \*/错误的字体文件格式
 
-　　#define ENOSTR 60 /\* Device not a stream \*/设备不是流
+　　#define ENOSTR 60 /* Device not a stream */设备不是流
 
-　　#define ENODATA 61 /\* No data available \*/无数据
+　　#define ENODATA 61 /* No data available */无数据
 
-　　#define ETIME 62 /\* Timer expired \*/计时器到期
+　　#define ETIME 62 /* Timer expired */计时器到期
 
-　　#define ENOSR 63 /\* Out of streams resources \*/流资源不足
+　　#define ENOSR 63 /* Out of streams resources \*/流资源不足
 
-　　#define ENONET 64 /\* Machine is not on the network
-\*/机器不在网络上
+　　#define ENONET 64 /* Machine is not on the network
+*/机器不在网络上
 
 　　#define ENOPKG 65 /\* Package not installed \*/包未安装
 
@@ -148,7 +148,7 @@
 　　#define ESRMNT 69 /\* Srmount error \*/？
 
 　　#define ECOMM 70 /\* Communication error on send
-\*/发送过程中通讯错误
+*/发送过程中通讯错误
 
 　　#define EPROTO 71 /\* Protocol error \*/协议错误
 
@@ -250,39 +250,35 @@ reset \*/网络由于复位断开连接
 　　#define ESHUTDOWN 108 /\* Cannot send after transport endpoint
 shutdown \*/传输端点关闭后不能在发送
 
-　　#define ETOOMANYREFS 109 /\* Too many references: cannot splice
-\*/太多的引用：无法接合
+　　#define ETOOMANYREFS 109 /* Too many references: cannot splice */太多的引用：无法接合
 
-　　#define ETIMEDOUT 110 /\* Connection timed out \*/连接超时
+　　#define ETIMEDOUT 110 /* Connection timed out */连接超时
 
-　　#define ECONNREFUSED 111 /\* Connection refused \*/连接被拒绝
+　　#define ECONNREFUSED 111 /* Connection refused */连接被拒绝
 
-　　#define EHOSTDOWN 112 /\* Host is down \*/主机已关闭
+　　#define EHOSTDOWN 112 /* Host is down */主机已关闭
 
-　　#define EHOSTUNREACH 113 /\* No route to host \*/无法路由到主机
+　　#define EHOSTUNREACH 113 /* No route to host */无法路由到主机
 
-　　#define EALREADY 114 /\* Operation already in progress
-\*/操作已在进程中
+　　#define EALREADY 114 /* Operation already in progress */操作已在进程中
 
-　　#define EINPROGRESS 115 /\* Operation now in progress
-\*/进程中正在进行的操作
+　　#define EINPROGRESS 115 /* Operation now in progress */进程中正在进行的操作
 
-　　#define ESTALE 116 /\* Stale NFS file handle \*/
+　　#define ESTALE 116 /* Stale NFS file handle */
 
-　　#define EUCLEAN 117 /\* Structure needs cleaning \*/
+　　#define EUCLEAN 117 /* Structure needs cleaning */
 
-　　#define ENOTNAM 118 /\* Not a XENIX named type file \*/
+　　#define ENOTNAM 118 /* Not a XENIX named type file */
 
-　　#define ENAVAIL 119 /\* No XENIX semaphores available \*/
+　　#define ENAVAIL 119 /* No XENIX semaphores available */
 
-　　#define EISNAM 120 /\* Is a named type file \*/
+　　#define EISNAM 120 /* Is a named type file */
 
-　　#define EREMOTEIO 121 /\* Remote I/O error \*/
+　　#define EREMOTEIO 121 /* Remote I/O error */
 
-　　#define EDQUOT 122 /\* Quota exceeded \*/
+　　#define EDQUOT 122 /* Quota exceeded */
 
-　　#define ENOMEDIUM 123 /\* No medium found \*/
+　　#define ENOMEDIUM 123 /\* No medium found */
 
-　　#define EMEDIUMTYPE 124 /\* Wrong medium type \*/ \`\`\`
-
-\</markdown\>
+　　#define EMEDIUMTYPE 124 /* Wrong medium type */ 
+  ```
