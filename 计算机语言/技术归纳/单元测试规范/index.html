@@ -11,12 +11,13 @@ DRY（不要重复自己）促进代码的 正交性。
 因此，由于测试代码重复通常带来的风险较小，并提高了可读性，因此很容易看出它是如何被认为是可以接受的。
 原则上，在生产代码中使用 DRY，在测试代码中使用 DAMP。虽然两者同等重要，但只要稍加智慧，您就可以在对自己有利的情况下平衡。
 引用自： 在谈论单元测试时，&ldquo;DAMP not DRY&#34;是什么意思？
- 单元测试的准则 #   单元测试应该是可靠的，否则不能保证测试结果可信;  单元测试应该是可维护且易于阅读和理解的; 单元测试的每一个测试单元只测试一个用例，这样便于维护; 单元测试应该可以在任何机器上顺序运行，且不会相互影响，如果可以，希望也能不依赖环境因素或全局/外部状态; 单元测试应该自动化; 结合使用单元测试和集成测试; 单元测试应在有组织的测试实践中执行;    单元测试用例的命名方法 #  这里提供以下七种命名方法以供参考
+ 单元测试的准则 #   单元测试应该是可靠的，否则不能保证测试结果可信; 单元测试应该是可维护且易于阅读和理解的; 单元测试的每一个测试单元只测试一个用例，这样便于维护; 单元测试应该可以在任何机器上顺序运行，且不会相互影响，如果可以，希望也能不依赖环境因素或全局/外部状态; 单元测试应该自动化; 结合使用单元测试和集成测试; 单元测试应在有组织的测试实践中执行;  单元测试用例的命名方法 #  这里提供以下七种命名方法以供参考
 MethodName_StateUnderTest_ExpectedBehavior(方法名_在测试状态_预期行为) #  如果方法名在重构的时候被更改，那么测试用例也应该同样被更改，否则以后会难以被理解。示例：
 isAdult_AgeLessThan18_False
 withdrawMoney_InvalidAccount_ExceptionThrown
 admitStudent_MissingMandatoryFields_FailToAdmit
-MethodName_ExpectedBehavior_StateUnderTest(方法名_预期行为_在测试状态) #  与第一种有相同的问题。示例："><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="单元测试规范 #  名词解释 #  覆盖率 #  覆盖率是对自动化测试运行期间执行了多少代码产生的度量（100%覆盖意味着每一行代码都至少执行过） 不必追求100%的覆盖率，覆盖率在60%-80%是一个不错的范围，这个主要根据项目的情况来决定。
+MethodName_ExpectedBehavior_StateUnderTest(方法名_预期行为_在测试状态) #  与第一种有相同的问题。示例：
+isAdult_False_AgeLessThan18"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="单元测试规范 #  名词解释 #  覆盖率 #  覆盖率是对自动化测试运行期间执行了多少代码产生的度量（100%覆盖意味着每一行代码都至少执行过） 不必追求100%的覆盖率，覆盖率在60%-80%是一个不错的范围，这个主要根据项目的情况来决定。
 单元测试原则 #   DAMP 和DRY 这是一种平衡，而不是矛盾
 DAMP 和 DRY 并不矛盾，而是平衡了代码可维护性的两个不同方面。可维护的代码（易于更改的代码）是这里的最终目标。
 DAMP（描述性和有意义的短语）提高了代码的可读性。
@@ -29,13 +30,14 @@ DRY（不要重复自己）促进代码的 正交性。
 因此，由于测试代码重复通常带来的风险较小，并提高了可读性，因此很容易看出它是如何被认为是可以接受的。
 原则上，在生产代码中使用 DRY，在测试代码中使用 DAMP。虽然两者同等重要，但只要稍加智慧，您就可以在对自己有利的情况下平衡。
 引用自： 在谈论单元测试时，&ldquo;DAMP not DRY&#34;是什么意思？
- 单元测试的准则 #   单元测试应该是可靠的，否则不能保证测试结果可信;  单元测试应该是可维护且易于阅读和理解的; 单元测试的每一个测试单元只测试一个用例，这样便于维护; 单元测试应该可以在任何机器上顺序运行，且不会相互影响，如果可以，希望也能不依赖环境因素或全局/外部状态; 单元测试应该自动化; 结合使用单元测试和集成测试; 单元测试应在有组织的测试实践中执行;    单元测试用例的命名方法 #  这里提供以下七种命名方法以供参考
+ 单元测试的准则 #   单元测试应该是可靠的，否则不能保证测试结果可信; 单元测试应该是可维护且易于阅读和理解的; 单元测试的每一个测试单元只测试一个用例，这样便于维护; 单元测试应该可以在任何机器上顺序运行，且不会相互影响，如果可以，希望也能不依赖环境因素或全局/外部状态; 单元测试应该自动化; 结合使用单元测试和集成测试; 单元测试应在有组织的测试实践中执行;  单元测试用例的命名方法 #  这里提供以下七种命名方法以供参考
 MethodName_StateUnderTest_ExpectedBehavior(方法名_在测试状态_预期行为) #  如果方法名在重构的时候被更改，那么测试用例也应该同样被更改，否则以后会难以被理解。示例：
 isAdult_AgeLessThan18_False
 withdrawMoney_InvalidAccount_ExceptionThrown
 admitStudent_MissingMandatoryFields_FailToAdmit
-MethodName_ExpectedBehavior_StateUnderTest(方法名_预期行为_在测试状态) #  与第一种有相同的问题。示例："><meta property="og:type" content="article"><meta property="og:url" content="https://coderqs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/%E6%8A%80%E6%9C%AF%E5%BD%92%E7%BA%B3/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83/"><meta property="article:section" content="计算机语言"><title>单元测试规范 | 清松的笔记本</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css integrity="sha256-gsXb0jRHzuC0wqo+0Izglh+qQOH6Nw7uT4yfAuDUa18=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
-<script defer src=/zh.search.min.5cc5b7021c8843850ad999fab102dbb101a2e4e99f39fd7d4e182e5e376d522c.js integrity="sha256-XMW3AhyIQ4UK2Zn6sQLbsQGi5OmfOf19ThguXjdtUiw=" crossorigin=anonymous></script>
+MethodName_ExpectedBehavior_StateUnderTest(方法名_预期行为_在测试状态) #  与第一种有相同的问题。示例：
+isAdult_False_AgeLessThan18"><meta property="og:type" content="article"><meta property="og:url" content="https://coderqs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/%E6%8A%80%E6%9C%AF%E5%BD%92%E7%BA%B3/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83/"><meta property="article:section" content="计算机语言"><title>单元测试规范 | 清松的笔记本</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css integrity="sha256-gsXb0jRHzuC0wqo+0Izglh+qQOH6Nw7uT4yfAuDUa18=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/zh.search.min.97492ff7955a870ea6b80117d94e7a74bf84fc19990c34d0ed943320fd01b070.js integrity="sha256-l0kv95Vahw6muAEX2U56dL+E/BmZDDTQ7ZQzIP0BsHA=" crossorigin=anonymous></script>
 <script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>清松的笔记本</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><span>计算机语言</span><ul><li><input type=checkbox id=section-2f82c9a464154d0b6f9ef4350045ad73 class=toggle>
 <label for=section-2f82c9a464154d0b6f9ef4350045ad73 class="flex justify-between"><a role=button>程序语言</a></label><ul><li><input type=checkbox id=section-e836dff9c83488818449aee75c856312 class=toggle>
@@ -89,14 +91,10 @@ MethodName_ExpectedBehavior_StateUnderTest(方法名_预期行为_在测试状�
 <a class=anchor href=#%e5%90%8d%e8%af%8d%e8%a7%a3%e9%87%8a>#</a></h2><h3 id=覆盖率>覆盖率
 <a class=anchor href=#%e8%a6%86%e7%9b%96%e7%8e%87>#</a></h3><p>覆盖率是对自动化测试运行期间执行了多少代码产生的度量（100%覆盖意味着每一行代码都至少执行过）
 不必追求100%的覆盖率，覆盖率在60%-80%是一个不错的范围，这个主要根据项目的情况来决定。</p><h2 id=单元测试原则>单元测试原则
-<a class=anchor href=#%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e5%8e%9f%e5%88%99>#</a></h2><blockquote><p><strong>DAMP 和DRY 这是一种平衡，而不是矛盾</strong><br>DAMP 和 DRY
-并不矛盾，而是平衡了代码可维护性的两个不同方面。可维护的代码（易于更改的代码）是这里的最终目标。<br><strong>DAMP（描述性和有意义的短语）提高了代码的可读性。</strong><br>要维护代码，首先需要了解代码。要理解它，你必须阅读它。考虑一下你花多少时间阅读代码。这是很多。
-DAMP 通过减少阅读和理解代码所需的时间来提高可维护性。<br><strong>DRY（不要重复自己）促进代码的
-<a href=https://www.artima.com/articles/orthogonality-and-the-dry-principle>正交性</a>。</strong><br>删除重复确保系统中的每个概念在代码中都有一个单一的权威表示。对单个业务概念的更改会导致对代码的一次更改。DRY
-通过将更改（风险）隔离到系统中必须更改的那些部分来提高可维护性。<br><strong>那么，为什么重复在测试中更容易接受？</strong><br>测试通常包含固有的重复，因为它们一遍又一遍地测试相同的东西，只是输入值或设置代码略有不同。但是，与生产代码不同的是，这种重复通常仅与单个测试夹具/文件中的场景隔离。因此，重复是最小的和明显的，这意味着它比其他类型的重复给项目带来的风险更小。<br>此外，删除这种重复会降低测试的可读性。以前在每个测试中重复的细节现在隐藏在一些新方法或类中。为了全面了解测试，您现在必须在精神上将所有这些部分重新组合在一起。<br>因此，由于测试代码重复通常带来的风险较小，并提高了可读性，因此很容易看出它是如何被认为是可以接受的。<br>原则上，在生产代码中使用 DRY，在测试代码中使用
-DAMP。虽然两者同等重要，但只要稍加智慧，您就可以在对自己有利的情况下平衡。<br>引用自：
+<a class=anchor href=#%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e5%8e%9f%e5%88%99>#</a></h2><blockquote><p><strong>DAMP 和DRY 这是一种平衡，而不是矛盾</strong><br>DAMP 和 DRY 并不矛盾，而是平衡了代码可维护性的两个不同方面。可维护的代码（易于更改的代码）是这里的最终目标。<br><strong>DAMP（描述性和有意义的短语）提高了代码的可读性。</strong><br>要维护代码，首先需要了解代码。要理解它，你必须阅读它。考虑一下你花多少时间阅读代码。这是很多。 DAMP 通过减少阅读和理解代码所需的时间来提高可维护性。<br><strong>DRY（不要重复自己）促进代码的
+<a href=https://www.artima.com/articles/orthogonality-and-the-dry-principle>正交性</a>。</strong><br>删除重复确保系统中的每个概念在代码中都有一个单一的权威表示。对单个业务概念的更改会导致对代码的一次更改。DRY 通过将更改（风险）隔离到系统中必须更改的那些部分来提高可维护性。<br><strong>那么，为什么重复在测试中更容易接受？</strong><br>测试通常包含固有的重复，因为它们一遍又一遍地测试相同的东西，只是输入值或设置代码略有不同。但是，与生产代码不同的是，这种重复通常仅与单个测试夹具/文件中的场景隔离。因此，重复是最小的和明显的，这意味着它比其他类型的重复给项目带来的风险更小。<br>此外，删除这种重复会降低测试的可读性。以前在每个测试中重复的细节现在隐藏在一些新方法或类中。为了全面了解测试，您现在必须在精神上将所有这些部分重新组合在一起。<br>因此，由于测试代码重复通常带来的风险较小，并提高了可读性，因此很容易看出它是如何被认为是可以接受的。<br>原则上，在生产代码中使用 DRY，在测试代码中使用 DAMP。虽然两者同等重要，但只要稍加智慧，您就可以在对自己有利的情况下平衡。<br>引用自：
 <a href=https://stackoverflow.com/questions/6453235/what-does-damp-not-dry-mean-when-talking-about-unit-tests>在谈论单元测试时，&ldquo;DAMP not DRY"是什么意思？</a></p></blockquote><h2 id=单元测试的准则>单元测试的准则
-<a class=anchor href=#%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e7%9a%84%e5%87%86%e5%88%99>#</a></h2><ol><li>单元测试应该是可靠的，否则不能保证测试结果可信;<ul><li>单元测试应该是可维护且易于阅读和理解的;</li><li>单元测试的每一个测试单元只测试一个用例，这样便于维护;</li><li>单元测试应该可以在任何机器上顺序运行，且不会相互影响，如果可以，希望也能不依赖环境因素或全局/外部状态;</li><li>单元测试应该自动化;</li><li>结合使用单元测试和集成测试;</li><li>单元测试应在有组织的测试实践中执行;</li></ul></li></ol><h2 id=单元测试用例的命名方法>单元测试用例的命名方法
+<a class=anchor href=#%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e7%9a%84%e5%87%86%e5%88%99>#</a></h2><ul><li>单元测试应该是可靠的，否则不能保证测试结果可信;</li><li>单元测试应该是可维护且易于阅读和理解的;</li><li>单元测试的每一个测试单元只测试一个用例，这样便于维护;</li><li>单元测试应该可以在任何机器上顺序运行，且不会相互影响，如果可以，希望也能不依赖环境因素或全局/外部状态;</li><li>单元测试应该自动化;</li><li>结合使用单元测试和集成测试;</li><li>单元测试应在有组织的测试实践中执行;</li></ul><h2 id=单元测试用例的命名方法>单元测试用例的命名方法
 <a class=anchor href=#%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e7%94%a8%e4%be%8b%e7%9a%84%e5%91%bd%e5%90%8d%e6%96%b9%e6%b3%95>#</a></h2><p>这里提供以下七种命名方法以供参考</p><h3 id=methodname_stateundertest_expectedbehavior方法名_在测试状态_预期行为>MethodName_StateUnderTest_ExpectedBehavior(方法名_在测试状态_预期行为)
 <a class=anchor href=#methodname_stateundertest_expectedbehavior%e6%96%b9%e6%b3%95%e5%90%8d_%e5%9c%a8%e6%b5%8b%e8%af%95%e7%8a%b6%e6%80%81_%e9%a2%84%e6%9c%9f%e8%a1%8c%e4%b8%ba>#</a></h3><p>如果方法名在重构的时候被更改，那么测试用例也应该同样被更改，否则以后会难以被理解。示例：<br><code>isAdult_AgeLessThan18_False</code><br><code>withdrawMoney_InvalidAccount_ExceptionThrown</code><br><code>admitStudent_MissingMandatoryFields_FailToAdmit</code></p><h3 id=methodname_expectedbehavior_stateundertest方法名_预期行为_在测试状态>MethodName_ExpectedBehavior_StateUnderTest(方法名_预期行为_在测试状态)
 <a class=anchor href=#methodname_expectedbehavior_stateundertest%e6%96%b9%e6%b3%95%e5%90%8d_%e9%a2%84%e6%9c%9f%e8%a1%8c%e4%b8%ba_%e5%9c%a8%e6%b5%8b%e8%af%95%e7%8a%b6%e6%80%81>#</a></h3><p>与第一种有相同的问题。示例：<br><code>isAdult_False_AgeLessThan18</code><br><code>withdrawMoney_ThrowsException_IfAccountIsInvalid</code><br><code>admitStudent_FailToAdmit_IfMandatoryFieldsAreMissing</code></p><h3 id=testfeature-being-testedtest要测试的功能>test[Feature being tested](test要测试的功能)
